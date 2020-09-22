@@ -1,7 +1,9 @@
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
-
+var multer  = require('multer')
+var storage = multer.memoryStorage()
+var upload = multer({ storage: storage })
 var indexRouter = require('./routes/index');
 
 var app = express();
